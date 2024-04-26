@@ -300,7 +300,7 @@ body {
   .bar {
     
     width: calc(100% / 6 - 10px); /* Adjust width as needed */
-    background-color: #01320d;
+    background-color:  #176429;
     color: rgb(255, 255, 255);
     font-size: larger;
     text-align: center;
@@ -379,8 +379,9 @@ body {
     width: 300px;
     border-collapse: collapse;
     margin: 20px;
-    margin-top: 75px;
+    margin-top: 240px;
     margin-right: 100px;
+    border-radius: 10px;
   }
   .flex-container th, td {
     padding: 10px;
@@ -390,7 +391,7 @@ body {
   
   .flex-container th {
     color: white;
-    background-color: #093a25;
+    background-color:  #176429;
   }
   
   /* Style for table header */
@@ -402,6 +403,59 @@ body {
   /* Style for table body */
   .flex-container tbody tr:nth-child(even) {
     background-color: #f2f2f2;
+  }
+  
+  /*dashboard*/
+  /* Style for dashboard content section */
+.dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  /* Style for individual boxes */
+  .box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    text-align: center;
+  }
+  
+  /* Style for paragraph inside the box */
+  .box{
+    margin-top: 60px;
+  }
+  .box p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Additional styling for specific boxes */
+  #b1 {
+    background-color: #98c7a8;
+  }
+  
+  #b2 {
+    background-color: #98c7a8;
+  }
+  
+  #b3 {
+    background-color: #98c7a8;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+    }
+  
+    .box {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   
   
