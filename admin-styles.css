@@ -458,4 +458,88 @@ body {
     }
   }
   
-  
+  /*setting*/
+  /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.setting-content-admin{
+  margin-top: 100px;
+}
+.container {
+ 
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #045745;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #123e65;
+}
+
+.user-actions {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.role-dropdown {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.role-dropdown label {
+  font-weight: bold;
+}
+
+.role-dropdown select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.access-control {
+  text-align: center;
+}
+
+.access-level {
+  margin-bottom: 20px;
+}
+
+.access-level label {
+  font-weight: bold;
+}
+
+.access-level select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+}

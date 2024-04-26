@@ -63,8 +63,45 @@
    </div>
   </div>
   <div class="home-content">
+    <section class="setting-content-admin">
+      <div class="container">
+        <h1>User Management</h1>
     
+        <div class="user-actions">
+          <form class="assign-sub">
+            <label for="firstname">First Name: </label>
+            <input type="firstname" id="firstname" placeholder="first name" required><br><br>
+            <label for="lastname">Last Name: </label>
+            <input type="lastname" id="lastname" placeholder="last name" required><br><br>
+            
+            
+            <div class="role-dropdown">
+                <label for="assign-role">Assign Role:</label>
+                <select name="assign-role" id="assign-role">
+                    <option value="report">Report Accounts</option>
+                    <option value="approve">Approve Reservation</option>
+                    <option value="decline">Decline Reservation</option>
+                </select>
+            </div>
+        </div>
     
+        <div class="access-control">
+            <h2>Access Control</h2><br><br>
+    
+            <div class="access-level">
+                <label for="sub-admin-access">Set Access Level for Sub Admin:</label>
+                <select name="sub-admin-access" id="sub-admin-access">
+                    <option value="none">None</option>
+                    <option value="read">Read</option>
+                    <option value="write">Write</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <p><br></p><button class="btn">Add Sub Admin</button>
+            </div>
+        </div>
+    </div>
+  </form>
+    </section>
   </div>
 
 <script src="subadmin.js"></script>
