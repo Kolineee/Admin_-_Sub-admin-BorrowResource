@@ -67,38 +67,63 @@
       </div>
    </div>
   </div>
-  <div class="home-content">
+  <div class="homed-content">
+    
   <section class="dashboard-content">
+    
     <div class="box" id="b1">
-      <h2>Number of Student</h2><br>
+      <div class="box">
+      <i class='bx bx-user icon'></i></div>
+      <h2>Number of Student</h2><p><br></p>
       <p>368 Students</p>
     </div>
     <div class="box" id="b2">
-      <h2>Total Resources</h2><br>
+      <div class="box">
+      <i class='bx bx-book-alt icon'></i></div>
+      <h2>Total Resources</h2><p><br></p>
       <p>23 Resources</p>
     </div>
     <div class="box" id="b3">
-      <h2>Total Borrowed</h2><br>
+      <div class="box">
+      <i class='bx bx-check icon'></i></div>
+      <h2>Total Borrowed</h2><p><br></p>
       <p>156 Total Borrowed</p>
     </div>
-  </section>
-  <div class="containerr">  
-    <p><br></p>
-    <h1><strong>Daily Statistics</strong></h1>
-    <div class="chart">
-      <div class="bar">Mon</div>
-      <div class="bar">Tue</div>
-      <div class="bar">Wed</div>
-      <div class="bar">Thu</div>
-      <div class="bar" >Fri</div>
-      <div class="bar">Sat</div>
+ 
+  </div>
+  <div class="chart-container">
+    <h3>Daily Record Chart</H3>
+    
+    <svg class="chart"></svg>
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: blue;"></div>
+            <span>Monday</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: green;"></div>
+            <span>Tuesday</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: red;"></div>
+            <span>Wednesday</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: orange;"></div>
+            <span>Thursday</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: rgb(217, 58, 178);"></div>
+          <span>Friday</span>
+      </div>
     </div>
-    <button class="weekly-statistics" onclick="window.location.href='weekly-statistics.html'">Weekly</button>
+  </div>
+  </div>
     </div>
   </div>
 </div>
 
-<script src="subadmin.js"></script>
+
 <div class="flex-container">
   <table>
     <thead>
@@ -139,6 +164,9 @@
   </table>
 </div>
 </div>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="admin.js"></script>
 </body>
+
 
 </html>

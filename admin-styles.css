@@ -229,21 +229,6 @@ body {
     background: none;
 }
 
-.home-content {
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 78px);
-    left: 78px;
-    transition: all 0.5s ease;
-}
-
-.home-content .text {
-    font-size: 25px;
-    font-weight: 500;
-    color: black;
-    margin: 12px;
-}
-
 .sidebar.active + .home-content {
     width: calc(100% - 240px);
     left: 240px;
@@ -251,9 +236,10 @@ body {
 
 
   /* USER LIST */
-  .user-list {
+  .home-content .user-list {
+    width: 1000px;
     margin-top: 20px;
-    margin-left: 50px; /* Adjust this value as needed */
+    margin-left: 150px; /* Adjust this value as needed */
     margin-right: 50px;
   }
   
@@ -279,89 +265,65 @@ body {
 
   /*setting*/
   /*statistics graph*/
-/* styles.css */
 
-.containerr {
-    h2{color: black;}
-    h1{font-weight: bolder;}
-    width: 700px;
-    margin: 50px auto;
-    margin-left: 50px;
-    position: inherit;
-    padding-left: 50px;
-  }
-  
-  .chart {
-    margin-top: 50px;
+  .chart-container {
+    width: 35%;
+   margin-left: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 300px;
+
+}
+.chart {
+    width: 100%;
+    height: 250px;
+}
+
+.chart-line {
+    fill: none;
+    stroke-width: 2;
+}
+
+.axis-text {
+    font-size: 12px;
+}
+
+.line-room {
+    stroke: blue;
+}
+
+.line-laboratory {
+    stroke: green;
+}
+
+.line-equipments {
+    stroke: red;
+}
+
+.line-auditorium {
+    stroke: orange;
+}
+
+.line-auditorium {
+  stroke:rgb(217, 58, 178);
+}
+.legend {
     display: flex;
     justify-content: space-between;
-    height: 300px;
-  }
-  
-  .bar {
-    border-radius: 10px;
-    width: 100px;
-    width: calc(100% / 6 - 10px); /* Adjust width as needed */
-    background-color:  #176429;
-    color: rgb(255, 255, 255);
-    font-size: larger;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  /* Adjust individual bar heights */
-  /*daily*/
-  .bar:nth-child(1) { height: 120px; }
-  .bar:nth-child(2) { height: 110px; }
-  .bar:nth-child(3) { height: 80px; }
-  .bar:nth-child(4) { height: 65px; }
-  .bar:nth-child(5) { height: 165px; }
-  .bar:nth-child(6) { height: 80px; }
-  
-  /*weekly*/
-  .bar:nth-child(1) { height: 120px; }
-  .bar:nth-child(2) { height: 110px; }
-  .bar:nth-child(3) { height: 70px; }
-  .bar:nth-child(4) { height: 65px; }
+    margin-top: 20px;
+}
 
-  /*Montly*/
-  .bar:nth-child(1) { height: 120px; }
-  .bar:nth-child(2) { height: 110px; }
-  .bar:nth-child(3) { height: 50px; }
-  .bar:nth-child(4) { height: 65px; }
-  .bar:nth-child(5) { height: 165px; }
-  .bar:nth-child(6) { height: 80px; }
-  .bar:nth-child(7) { height: 50px; }
-  .bar:nth-child(8) { height: 65px; }
-  .bar:nth-child(9) { height: 165px; }
-  .bar:nth-child(10) { height: 80px; }
+.legend-item {
+    display: flex;
+    align-items: center;
+}
 
-  .statistics-admin-sec{
-    p{font-weight: bold;
-        color:white;}
-    margin-top: 0;
-    height: 100vh;
-    background-color: rgb(213, 243, 227);
-        width: 100%;
-        height: 100vh; /* Sets height to 100% of the viewport height */
-        margin: 0;
-        padding: 0;
-        overflow: hidden; /* Prevents any overflow content from displaying */
-      
-      
-  }
-  
-  .weekly-statistics{
-    margin-top: 0px;
-    height: 35px;
-    width: 100px;
-    backdrop-color: white;
-    color:  black;
-    border-color: black;
-    border-radius: 10px;
-    box-shadow: grey;
-  }
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
 
   /*table*/
   /* Define a CSS variable for the right padding */
@@ -371,6 +333,7 @@ body {
   
   /* Style for the flex container */
   .flex-container {
+    margin-bottom: 300px;
     display: flex;
     justify-content: flex-end;
     padding-right: var(--right-padding); /* Use the CSS variable for right padding */
@@ -381,31 +344,39 @@ body {
     width: 300px;
     border-collapse: collapse;
     margin: 20px;
-    margin-top: 240px;
-    margin-right: 100px;
+    margin-top: 20px;
+    margin-right: 50px;
     border-radius: 10px;
-  }
-  .flex-container th, td {
-    padding: 10px;
-    border: 1px solid #176429;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visualization */
+}
+
+.flex-container th, .flex-container td {
+    padding: 12px; /* Increase padding for better spacing */
+    border: 1px solid #ddd;
     text-align: left;
-  }
-  
-  .flex-container th {
+}
+
+.flex-container th {
     color: white;
-    background-color:  #176429;
-  }
-  
-  /* Style for table header */
-  .flex-container thead th {
+    background-color: #176429;
+}
+
+/* Style for table header */
+.flex-container thead th {
     font-weight: bold;
     text-transform: uppercase;
-  }
-  
-  /* Style for table body */
-  .flex-container tbody tr:nth-child(even) {
+}
+
+/* Style for table body */
+.flex-container tbody tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
+}
+
+/* Hover effect on table rows */
+.flex-container tbody tr:hover {
+    background-color: #e1e1e1;
+}
+
   
   /*dashboard*/
   /* Style for dashboard content section */
@@ -544,4 +515,177 @@ h1 {
   width: 100%;
   max-width: 200px;
   box-sizing: border-box;
+}
+
+/*statistics in admin*/
+
+.stat-chart-admin-container {
+  width: 35%;
+ margin-left: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 100px;
+
+}
+.chart {
+  width: 100%;
+  height: 350px;
+}
+
+.chart-line {
+  fill: none;
+  stroke-width: 2;
+}
+
+.axis-text {
+  font-size: 12px;
+}
+
+.line-room {
+  stroke: blue;
+}
+
+.line-laboratory {
+  stroke: green;
+}
+
+.line-equipments {
+  stroke: red;
+}
+
+.line-auditorium {
+  stroke: orange;
+}
+
+.line-auditorium {
+stroke:rgb(217, 58, 178);
+}
+.legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/*resource chart*/
+
+.stat-resource-admin-container {
+  width: 35%;
+  margin-left: 850px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 100px;
+
+}
+.chart {
+  width: 900px;
+  height: 250px;
+}
+
+.chart-line {
+  fill: none;
+  stroke-width: 2;
+}
+
+.axis-text {
+  font-size: 12px;
+}
+
+.line-room {
+  stroke: blue;
+}
+
+.line-laboratory {
+  stroke: green;
+}
+
+.line-equipments {
+  stroke: red;
+}
+
+.line-auditorium {
+  stroke: orange;
+}
+
+.line-auditorium {
+stroke:rgb(217, 58, 178);
+}
+.legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/**/
+.homed-content {
+  margin-left: 160px;
+  margin-top: -10px;
+  display: flex; /* Display boxes in a row */
+}
+
+/* Style for individual boxes */
+.homed-content .box {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Adjusted margin */
+  display: flex; /* Display icon and content in a row */
+  align-items: center; /* Align items vertically */
+}
+
+/* Style for icon */
+.homed-content .box .icon {
+  align-items: center;
+  font-size: 24px; /* Adjusted icon size */
+  margin-right: 10px; /* Add space between icon and text */
+}
+
+/* Style for heading inside the box */
+.homed-content .box h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 20px; /* Maintain font size */
+  color: #333; /* Text color */
+}
+
+/* Style for paragraph inside the box */
+.homed-content .box p {
+  margin: 0;
+  font-size: 16px; /* Adjusted font size */
+  color: #666; /* Text color */
+}
+
+/* Additional styling for specific boxes */
+#b1 {
+  background-color: #98c7a8;
+}
+
+#b2 {
+  background-color: #98c7a8;
+}
+
+#b3 {
+  background-color: #98c7a8;
 }
