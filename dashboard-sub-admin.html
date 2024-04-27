@@ -33,11 +33,25 @@
         <span class="tooltip">User</span>
       </li>
       <li>
-        <a href="daily-statistics.html">
+        <a href="resources-sub-admin.html">
+          <i class='bx bx-book' style='color:#ffffff' ></i>
+          <span class="link_name">Resources</span>
+        </a>
+        <span class="tooltip">Resources</span>
+      </li>
+      <li>
+        <a href="statistics-sub-admin.html">
           <i class='bx bx-bar-chart-square'></i>
           <span class="link_name">Statistics</span>
         </a>
         <span class="tooltip">Statistics</span>
+      </li>
+      <li>
+        <a href="report-sub-admin.html">
+          <i class='bx bxs-report' style='color:#ffffff' ></i>
+          <span class="link_name">Reports</span>
+        </a>
+        <span class="tooltip">Reports</span>
       </li>
       <li>
         <a href="notification-sub-admin.html">
@@ -68,9 +82,138 @@
    </div>
   </div>
   <div class="home-content">
-    <div class="text">Dashboard Content</div>
-  </div>
+    <div class="boxx1">
+        <h4>Welcome, Trixie Santos!</h4>
+        <p>Here are your important tasks and reports</p>  
+        <p>Please check your progress and updates.</p>
+    </div>
+      <div class="main">
+        <input class="srch" type="search" name="" placeholder="Search...">
+        <button class="btn">Search</button>
+    </div>
+</div>
 
+<div class="box3-container">
+  <div class="box-container">
+    <div class="box">
+      <i class='bx bx-user icon'></i>
+      <div>
+        <div class="text">Number of Students </div>
+        <p class="numbers">368 Students</p>
+      </div>
+    </div>
+    <div class="box">
+      <i class='bx bx-book-alt icon'></i>
+      <div>
+        <div class="text">Total Resources</div>
+        <p class="numbers">23 Resources</p>
+      </div>
+    </div>
+    <div class="box">
+      <i class='bx bx-check icon'></i>
+      <div>
+        <h4 class="text">Total Borrowed</h4>
+        <p class="numbers">60 Borrowed</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pfp-crd">
+<div class="profile-card">
+  <img src="subadmin_pic.jpeg" alt="Profile Picture" class="profile-pic">
+  <h2>Trixie Santos</h2>
+  <p>Assistant Administrator</p>
+  <div class="status-indicator"></div>
+  <p>Status</p>
+</div>
+</div>
+    
+<div class="chart-container">
+  <h3>Borrowed Chart</H3>
+  
+  <svg class="chart"></svg>
+  <div class="legend">
+      <div class="legend-item">
+          <div class="legend-color" style="background-color: blue;"></div>
+          <span>Room</span>
+      </div>
+      <div class="legend-item">
+          <div class="legend-color" style="background-color: green;"></div>
+          <span>Laboratory</span>
+      </div>
+      <div class="legend-item">
+          <div class="legend-color" style="background-color: red;"></div>
+          <span>Equipments</span>
+      </div>
+      <div class="legend-item">
+          <div class="legend-color" style="background-color: orange;"></div>
+          <span>Auditorium</span>
+      </div>
+  </div>
+</div>
+</div>
+<div class="container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Borrowed</th>
+          <th>Today</th>
+          <th class="hrs">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Colleen Tingas</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">7:00 - 8:00</td>
+        </tr>
+        <tr>
+          <td>Tricia Galvez</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">8:00 - 9:00</td>
+        </tr>
+        <tr>
+          <td>Danna Tabio</td>
+          <td class="cancel">Cancel</td>
+          <td class="hrs">9:00 - 10:00</td>
+        </tr>
+        <tr>
+          <td>Farhan Hussin</td>
+          <td class="returned">Returned</td>
+          <td class="hrs">10:00 - 11:00</td>
+        </tr>
+        <tr>
+          <td>Bombom Mudrigal</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">11:00 - 12:00</td>
+        </tr>
+        <tr>
+          <td>Jane Batumbakal</td>
+          <td class="returned">Returned</td>
+          <td class="hrs">12:00 - 13:00</td>
+        </tr>
+        <tr>
+          <td>Ethan Alviar</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">13:00 - 14:00</td>
+        </tr>
+        <tr>
+          <td>Calista Perez</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">14:00 - 15:00</td>
+        </tr>
+        <tr>
+          <td>Camille Ferrer</td>
+          <td class="reserved">Reserved</td>
+          <td class="hrs">15:00 - 16:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
 <script src="subadmin.js"></script>
 </body>
 
