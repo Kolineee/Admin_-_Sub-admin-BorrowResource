@@ -62,3 +62,10 @@ svg.append('path')
     .datum(data)
     .attr('class', 'chart-line line-auditorium')
     .attr('d', lineAuditorium);
+
+    /* drop down*/
+    function toggleDropdown() {
+        var dropdownMenu = document.getElementById("user-type-dropdown");
+        dropdownMenu.classList.toggle("active");
+      }
+      
