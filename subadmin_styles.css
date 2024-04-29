@@ -467,51 +467,121 @@ body {
     margin-right: 5px;
 }
 
-.container {
-    width: 30%;
-    height: 250px;
-    margin: 20px auto;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .user-list {
+
+ 
+
+  /*USERLIST*?
+  .box-user{
+    display: flex;
+    background-color: #03511c;
+    color: white;
+    h1{
+      margin-top: 10px;
+      margin-left: 20px;
+      text-align: center;}
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
     margin-top: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 4px; /* Changed padding */
-    text-align: left;
-    font-size: small; /* Changed font size */
-  }
-  
-  th:first-child {
-    width: 50%;
-  }
-  
-  .hrs {
-    text-align: center; /* Aligning time column in the middle */
-  }
-  
-  .reserved {
-    color: green; /* Changed color for "Reserved" */
-  }
-  
-  .cancel {
-    color: red;
-  }
-  
-  .returned {
-    color: orange; /* Changed color for "Returned" */
-  }
-  
+    margin-left: 700px; 
+    }
+    
+    .box-user {
+      position: relative;
+    }
+    
+    .box-user h1 {
+      margin-bottom: 20px;
+    }
+    
+    .dropdown-toggle {
+      margin-top: 15px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    
+    .dropdown-toggle::after {
+      content: "\25BC"; /* Unicode for down arrow */
+    /*
+      display: inline-block;
+      margin-left: 5px;
+      transform: rotate(90deg);
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 100px;
+      top: 60px;
+      background-color: #e8efeb;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      height: 100px;
+      width: 100px;
+      border-width: 5px;
+      border-color: black;
+    }
+    
+    .dropdown-item{
+      text-align: center;
+      margin-top: 10px;
+      color: rgb(12, 8, 8);
+    }
+    
+    .dropdown-menu.active {
+      display: block;
+    }
+    .dropdown-item a {
+      color: inherit; /* Inherit the color from the parent element */
+   /*
+      text-decoration: none; /* Remove underline */
+    }
+    /*
+    .dropdown-item a:hover {
+     text-decoration: underline;
+    }
+    
+    .home-content{
+      display: flex;
+        width: 1200px;
+        margin-top: 20px;
+        margin-left: 260px; /* Adjust this value as needed */
+       /*
+        margin-right: 50px;
+        text-align: center;
+    }
+      .home-contentt .user-list {
+        display: flex;
+        width: 900px;
+        margin-top: 20px;
+        margin-left: 300px; /* Adjust this value as needed */
+      /*
+        margin-right: 50px;
+        text-align: center;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      
+      th {
+        text-align: center;
+        color: white;
+        background-color: #03511c;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
 
 @media (max-width: 768px) {
     .home-content {

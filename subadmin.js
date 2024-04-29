@@ -86,3 +86,63 @@ let btn = document.querySelector("#btn");
         .attr('class', 'chart-line line-auditorium')
         .attr('d', lineAuditorium);
 
+//RESOURCES//
+function addResource() {
+    var resourceName = document.getElementById("resource").value;
+    var startTime = document.getElementById("startTime").value;
+    var endTime = document.getElementById("endTime").value;
+    if (resourceName.trim() === "") {
+        alert("Please select a resource name.");
+        return;
+    }
+    var availableTime = formatTime(startTime) + " - " + formatTime(endTime);
+    var table = document.getElementById("resource-table");
+    var row = table.insertRow(0); // insert at the first position to make it the first row
+    var resourceNameCell = row.insertCell(0);
+    var availableTimeCell = row.insertCell(1);
+    var statusCell = row.insertCell(2);
+    var actionCell = row.insertCell(3);
+    resourceNameCell.innerHTML = resourceName.toLowerCase(); // Convert to lowercase
+    availableTimeCell.innerHTML = availableTime;
+    statusCell.innerHTML = "Available";
+    actionCell.innerHTML = '<button onclick="editRow(this)" class="boxicon bx bx-edit"></button><button onclick="deleteRow(this)" class="boxicon bx bx-trash"></button>';
+    // Highlight the newly added row
+    var highlightedRow = table.getElementsByClassName("highlight-green")[0];
+    if (highlightedRow) {
+        highlightedRow.classList.remove("highlight-green");
+    }
+    row.classList.add("highlight-green");
+    // Clear input fields after adding resource
+    document.getElementById("startTime").value = "";
+    document.getElementById("endTime").value = "";
+}
+
+function deleteRow(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+function editRow(btn) {
+    var row = btn.parentNode.parentNode;
+    var cells = row.getElementsByTagName("td");
+    var resourceName = cells[0].innerText;
+    var times = cells[1].innerText.split(" - ");
+    var startTime = times[0];
+    var endTime = times[1];
+    document.getElementById("resource").value = resourceName;
+    document.getElementById("startTime").value = startTime;
+    document.getElementById("endTime").value = endTime;
+    deleteRow(btn); // Delete the row after editing
+}
+
+function formatTime(time) {
+    // Split time by colon to separate hours and minutes
+    var parts = time.split(":");
+    var hours = parseInt(parts[0]);
+    var minutes = parseInt(parts[1]);
+    var ampm = hours >= 12 ? "PM" : "AM"; // Determine if it's AM or PM
+    hours = hours % 12; // Convert hours to 12-hour format
+    hours = hours ? hours : 12; // "0" should be "12"
+    minutes = minutes < 10 ? "0" + minutes : minutes; // Add leading zero to minutes if necessary
+    return hours + ":" + minutes + " " + ampm;
+}
