@@ -4,6 +4,8 @@ let sidebar = document.querySelector(".sidebar");
 btn.onclick = function(){
     sidebar.classList.toggle("active");
 }
+
+
 /*responsive nav*/
 
 
@@ -189,4 +191,7 @@ svg2.append('path')
           popupContainer.style.display = "none";
         }, 2000);
       });
-      
+      /*add admin*/
+      function add() {
+        alert('Added successfully');
+      }

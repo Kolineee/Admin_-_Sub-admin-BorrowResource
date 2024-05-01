@@ -764,10 +764,11 @@ stroke:rgb(217, 58, 178);
   font-size: 16px; /* Adjusted font size */
   color: #666; /* Text color */
 }
-.box{margin-top: 20px;}
+.box{margin-top: 20px;;}
 
 /* Additional styling for specific boxes */
 #b1 {
+  margin-left: 80px;
   background-color: #98c7a8;
 }
 
@@ -786,7 +787,7 @@ stroke:rgb(217, 58, 178);
   height: 80px;
   padding: 8px 20px; 
   border-radius: 10px; 
-  margin-left: 190px;
+  margin-left: 250px;
   margin-top: 10px; 
  
 }
@@ -902,7 +903,7 @@ stroke:rgb(217, 58, 178);
     .btn {
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #007bff;
+      background-color: #0e5737;
       color: white;
       border: none;
       border-radius: 5px;
