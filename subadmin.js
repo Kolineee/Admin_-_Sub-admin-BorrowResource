@@ -5,8 +5,9 @@ let btn = document.querySelector("#btn");
     sidebar.classList.toggle("active");
   }
 
+   /*curve chart*/
 
-    // Sample data for the chart (you can replace this with your actual data)
+
     const data = [
         { day: 'Mon', room: 10, laboratory: 5, equipments: 8, auditorium: 1 },
         { day: 'Tue', room: 12, laboratory: 7, equipments: 9, auditorium: 2 },
@@ -17,9 +18,9 @@ let btn = document.querySelector("#btn");
     ];
 
     // Set up SVG dimensions
-    const svgWidth = 500;
+    const svgWidth = 270;
     const svgHeight = 250;
-    const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+    const margin = { top: 20, right: 20, bottom: 10, left: 20 };
     const width = svgWidth - margin.left - margin.right;
     const height = svgHeight - margin.top - margin.bottom;
 
@@ -142,7 +143,28 @@ function formatTime(time) {
     var minutes = parseInt(parts[1]);
     var ampm = hours >= 12 ? "PM" : "AM"; // Determine if it's AM or PM
     hours = hours % 12; // Convert hours to 12-hour format
-    hours = hours ? hours : 12; // "0" should be "12"
-    minutes = minutes < 10 ? "0" + minutes : minutes; // Add leading zero to minutes if necessary
+    hours = hours ? hours : 12; // 
+    minutes = minutes < 10 ? "0" + minutes : minutes;
     return hours + ":" + minutes + " " + ampm;
+}
+
+//notif//
+function showPopup(name, message, time, action) {
+    document.getElementById("popupName").innerText = name;
+    document.getElementById("popupMessage").innerText = message;
+    document.getElementById("popupTime").innerText = time;
+    const button = document.getElementById("popupButton");
+    button.innerText = action === 'confirm' ? 'Confirm' : 'Reschedule';
+    button.dataset.action = action;
+    button.style.backgroundColor = action === 'confirm' ? '#4CAF50' : '#ff9800';
+    button.onclick = action === 'reschedule' ? redirectToReschedulePage : hidePopup;
+    document.getElementById("popup").style.display = "block";
+}
+
+function hidePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+function redirectToReschedulePage() {
+    window.location.href = "resources-sub-admin.html";
 }
