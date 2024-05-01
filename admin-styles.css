@@ -423,11 +423,11 @@ margin-left: 700px;
   
   /* Style for the data table */
   .flex-container table {
-    width: 300px;
+    width: 500px;
     border-collapse: collapse;
     margin: 20px;
-    margin-top: 20px;
-    margin-right: 50px;
+    margin-top: 50px;
+    margin-right: 100px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visualization */
 }
@@ -606,18 +606,21 @@ h1 {
 
 .stat-chart-admin-container {
   width: 35%;
- margin-left: 200px;
+ margin-left: 300px;
   border: 1px solid #ccc;
   padding: 10px;
   position: absolute;
-  top: 100px;
+  top: 150px;
 
 }
 .chart {
   width: 100%;
   height: 350px;
 }
-
+.chart
+.chart2 {
+  height: 250px; /* Set the desired height here */
+}
 .chart-line {
   fill: none;
   stroke-width: 2;
@@ -671,7 +674,7 @@ stroke:rgb(217, 58, 178);
   border: 1px solid #ccc;
   padding: 10px;
   position: absolute;
-  top: 100px;
+  top: 150px;
 
 }
 .chart {
@@ -727,7 +730,7 @@ stroke:rgb(217, 58, 178);
 /**/
 .homed-content {
   margin-left: 160px;
-  margin-top: -10px;
+  margin-top: -5px;
   display: flex; /* Display boxes in a row */
 }
 
@@ -761,6 +764,7 @@ stroke:rgb(217, 58, 178);
   font-size: 16px; /* Adjusted font size */
   color: #666; /* Text color */
 }
+.box{margin-top: 20px;}
 
 /* Additional styling for specific boxes */
 #b1 {
@@ -774,3 +778,46 @@ stroke:rgb(217, 58, 178);
 #b3 {
   background-color: #98c7a8;
 }
+
+
+.boxx1 {
+  background: linear-gradient(to right, #074309, #065d0a, #043d14);
+  width: 1100px; 
+  height: 80px;
+  padding: 8px 20px; 
+  border-radius: 10px; 
+  margin-left: 190px;
+  margin-top: 10px; 
+ 
+}
+.boxx1 h4{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.boxx1 p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 80; 
+  }
+
+  .boxx11 {
+    background: linear-gradient(to right, #074309, #065d0a, #043d14);
+    width: 1100px; 
+    height: 80px;
+    padding: 8px 20px; 
+    border-radius: 10px; 
+    margin-left: 280px;
+    margin-top: 40px; 
+   
+  }
+  .boxx11 h4{
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 8px;
+  }
+  .boxx11 p {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 80; 
+    }
