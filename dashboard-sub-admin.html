@@ -152,15 +152,20 @@
     position: absolute;
     display: flex;
     align-items: center;
-    width: 75%;
-    height: 250px;
+    width: 50%;
+    height: 440px;
     margin-left: 38px;
-    margin-top: 475px;
+    margin-top: 275px;
     background-color: #ffffff;
     border: 1px solid #ffffff;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px; 
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+  }
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   }
   
   .user-list {
@@ -212,7 +217,7 @@
     .texth3 {
     position: absolute;
     left: 38px;
-    top: 450px; 
+    top: 243px; 
     margin-bottom: 5px; 
   }
 </style>
@@ -295,9 +300,91 @@
           <td>Lab 1</td>
           <td class="reserved">Reserved</td>
         </tr>
+        <tr>
+          <td>Feliz Perez</td>
+          <td>Student</td>
+          <td class="hrs">7:00AM - 9:00AM</td>
+          <td>Projector 1</td>
+          <td class="reserved">Reserved</td>
+        </tr>
+        <tr>
+          <td>Mae Galvez</td>
+          <td>Teacher</td>
+          <td class="hrs">8:00AM - 9:30AM</td>
+          <td>TV</td>
+          <td class="reserved">Reserved</td>
+        </tr>
+        <tr>
+          <td>Princess Tabio</td>
+          <td>Student</td>
+          <td class="hrs">9:00AM - 11:00AM</td>
+          <td>HDMI</td>
+          <td class="cancel">Cancel</td>
+        </tr>
+        <tr>
+          <td>Elouisa Hussin</td>
+          <td>Student</td>
+          <td class="hrs">10:00AM - 11:30AM</td>
+          <td>Lec 1</td>
+          <td class="returned">Returned</td>
+        </tr>
+        <tr>
+          <td>Princess Mudrigal</td>
+          <td>Student</td>
+          <td class="hrs">11:00AM - 1:00PM</td>
+          <td>Lab 1</td>
+          <td class="reserved">Reserved</td>
+        </tr>
+        <tr>
+          <td>Luke Batumbakal</td>
+          <td>Teacher</td>
+          <td class="hrs">12:00PM - 1:30PM</td>
+          <td>Projector 2</td>
+          <td class="returned">Returned</td>
+        </tr>
+        <tr>
+          <td>Ethan Alpez</td>
+          <td>Teacher</td>
+          <td class="hrs">1:00PM - 2:30PM</td>
+          <td>Projector 1</td>
+          <td class="reserved">Reserved</td>
+        </tr>
+        <tr>
       </tbody>
     </table>
   </div>
+  
+<div class="texthh3">
+<h3>Notifications</h3>
+</div>
+  <div class="notifications1-container">
+    <div class="notifications" onclick="showPopup('Joy', 'returned HDMI', '10:00am-11:30am', 'reschedule')">
+        <p><span class="bold">Joy Marcelino</span> returned HDMI</p>
+    </div>
+    <div class="notification" onclick="showPopup('Bombom', 'borrowed projector 2', '11:00am-1:00pm', 'confirm')">
+        <p><span class="bold">Bombom Mudrikal</span> borrowed projector 2</p>
+    </div>
+      <div class="notification" onclick="showPopup('Wayne', 'returned TV', '12:00pm-2:00pm', 'reschedule')">
+          <p><span class="bold">Wayne Ferrer</span> returned  TV</p>
+      </div>
+  
+      <div class="notification" onclick="showPopup('Anna', 'canceled lec 2', '3:00pm-5:00pm', 'reschedule')">
+          <p><span class="bold">Anna Marquez</span> canceled Lec 2</p>
+      </div>
+  
+      <div class="notification" onclick="showPopup('Rinaflor', 'borrowed Lab 1', '2:00pm-4:00pm', 'confirm')">
+          <p><span class="bold">Rinaflor Alcano</span> borrowed lab 1</p>
+      </div>
+      <div class="notification" onclick="showPopup('Princess', 'borrowed projector 2', '11:30am-1:30pm', 'confirm')">
+        <p><span class="bold">Princess Ducoy</span> borrowed projector 2</p>
+    </div>
+
+    <div class="notification" onclick="showPopup('Wayne', 'returned HDMI', '12:30pm-2:00pm', 'reschedule')">
+        <p><span class="bold">Herwayne Cawili</span> returned  HDMI</p>
+    </div>
+    
+</div>
+
 </section>
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
