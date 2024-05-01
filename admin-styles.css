@@ -864,3 +864,19 @@ stroke:rgb(217, 58, 178);
       background-color: #cc0000;
     }
     
+    /*responsive content*/
+    .sidebar {
+      width: 80px; /* Initial width */
+      background-color: #333; /* Example background color */
+      color: white; /* Example text color */
+      transition: width 0.3s ease; /* Smooth transition */
+    }
+    
+    .sidebar.expanded {
+      width: 200px; /* Expanded width */
+    }
+    
+    .main-content {
+      transition: margin-left 0.3s ease; /* Smooth transition for main content */
+    }
+    

@@ -4,6 +4,20 @@ let sidebar = document.querySelector(".sidebar");
 btn.onclick = function(){
     sidebar.classList.toggle("active");
 }
+/*responsive nav*/
+const sidebar = document.getElementById('sidebar');
+const mainContent = document.getElementById('main-content');
+
+document.querySelectorAll('.navlist a').forEach((navItem) => {
+  navItem.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded');
+    if (sidebar.classList.contains('expanded')) {
+      mainContent.style.marginLeft = '200px'; // Adjust main content margin when expanded
+    } else {
+      mainContent.style.marginLeft = '80px'; // Reset main content margin when collapsed
+    }
+  });
+});
 
 // Sample data for the chart (you can replace this with your actual data)
 const data = [
