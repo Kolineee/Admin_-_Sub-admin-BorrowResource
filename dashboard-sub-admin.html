@@ -81,7 +81,7 @@
       </div>
    </div>
   </div>
-  <div class="home-content">
+  <section class="home-content">
     <div class="boxx1">
         <h4>Welcome, Trixie Santos!</h4>
         <p>Here are your important tasks and reports</p>  
@@ -91,8 +91,6 @@
         <input class="srch" type="search" name="" placeholder="Search...">
         <button class="btn">Search</button>
     </div>
-</div>
-
 <div class="box3-container">
   <div class="box-container">
     <div class="box">
@@ -105,7 +103,7 @@
     <div class="box">
       <i class='bx bx-book-alt icon'></i>
       <div>
-        <div class="text">Total Resources</div>
+        <div class="text">Resources Availability</div>
         <p class="numbers">23 Resources</p>
       </div>
     </div>
@@ -118,6 +116,7 @@
     </div>
   </div>
 </div>
+
 <div class="pfp-crd">
 <div class="profile-card">
   <img src="subadmin_pic.jpeg" alt="Profile Picture" class="profile-pic">
@@ -152,18 +151,23 @@
   </div>
 </div>
 </div>
-
-  <style>
+<style> 
+  .sidebar.active + .home-content .container {
+    width: 71%px; 
+  }   
   .container {
-    width: 30%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 75%;
     height: 250px;
-    margin: auto;
-    margin-left: 700px;
-    margin-bottom: 1800px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    margin-left: 38px;
+    margin-top: 475px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; 
   }
   
   .user-list {
@@ -171,26 +175,38 @@
   }
   
   table {
-    width: 100%;
+    width: 100%; 
     border-collapse: collapse;
   }
   
   th, td {
-    padding: 4px; /* Changed padding */
+    padding: 4px;
     text-align: left;
-    font-size: small; /* Changed font size */
+    font-size: small; 
   }
   
-  th:first-child {
-    width: 50%;
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 30%; 
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(3),
+  td:nth-child(3),
+  th:nth-child(4),
+  td:nth-child(4),
+  th:nth-child(5),
+  td:nth-child(5) {
+    width: auto; 
   }
   
   .hrs {
-    text-align: center; /* Aligning time column in the middle */
+    text-align: center; 
   }
   
   .reserved {
-    color: green; /* Changed color for "Reserved" */
+    color: green; 
   }
   
   .cancel {
@@ -198,70 +214,98 @@
   }
   
   .returned {
-    color: orange; /* Changed color for "Returned" */
+    color: orange; 
   }
+    .texth3 {
+    position: absolute;
+    left: 38px;
+    top: 450px; 
+    margin-bottom: 5px; 
+  }
+</style>
+<div class="texth3">
+<h3>Recent Borrow</h3>
+</div>
 
-
-  </style>
   <div class="container">
     <table>
       <thead>
         <tr>
-          <th>Borrowed</th>
-          <th>Today</th>
+          <th>Username</th>
+          <th>Role</th>
           <th class="hrs">Time</th>
+          <th>Resources</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Colleen Tingas</td>
+          <td>Student</td>
+          <td class="hrs">7:00AM - 9:00AM</td>
+          <td>Projector 1</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">7:00 - 8:00</td>
         </tr>
         <tr>
           <td>Tricia Galvez</td>
+          <td>Teacher</td>
+          <td class="hrs">8:00AM - 9:30AM</td>
+          <td>TV</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">8:00 - 9:00</td>
         </tr>
         <tr>
           <td>Danna Tabio</td>
+          <td>Student</td>
+          <td class="hrs">9:00AM - 11:00AM</td>
+          <td>HDMI</td>
           <td class="cancel">Cancel</td>
-          <td class="hrs">9:00 - 10:00</td>
         </tr>
         <tr>
           <td>Farhan Hussin</td>
+          <td>Student</td>
+          <td class="hrs">10:00AM - 11:30AM</td>
+          <td>Lec 1</td>
           <td class="returned">Returned</td>
-          <td class="hrs">10:00 - 11:00</td>
         </tr>
         <tr>
           <td>Bombom Mudrigal</td>
+          <td>Student</td>
+          <td class="hrs">11:00AM - 1:00PM</td>
+          <td>Lab 1</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">11:00 - 12:00</td>
         </tr>
         <tr>
           <td>Jane Batumbakal</td>
+          <td>Teacher</td>
+          <td class="hrs">12:00PM - 1:30PM</td>
+          <td>Projector 2</td>
           <td class="returned">Returned</td>
-          <td class="hrs">12:00 - 13:00</td>
         </tr>
         <tr>
           <td>Ethan Alviar</td>
+          <td>Teacher</td>
+          <td class="hrs">1:00PM - 2:30PM</td>
+          <td>Projector 1</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">13:00 - 14:00</td>
         </tr>
         <tr>
           <td>Calista Perez</td>
+          <td>Student</td>
+          <td class="hrs">4:00PM - 5:30PM</td>
+          <td>Lec 2</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">14:00 - 15:00</td>
         </tr>
         <tr>
           <td>Camille Ferrer</td>
+          <td>Student</td>
+          <td class="hrs">5:00PM - 7:00PM</td>
+          <td>Lab 1</td>
           <td class="reserved">Reserved</td>
-          <td class="hrs">15:00 - 16:00</td>
         </tr>
       </tbody>
     </table>
-  </section>
-</div>
+  </div>
+</section>
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
 <script src="subadmin.js"></script>
