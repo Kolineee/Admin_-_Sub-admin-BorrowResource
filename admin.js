@@ -173,4 +173,20 @@ svg2.append('path')
           notification.style.display = "none";
         }, 2000);
       }
+      /*addition admin */
+      document.getElementById("addBtn").addEventListener("click", function() {
+        var popupContainer = document.querySelector(".popup-container");
+        var popupMessage = document.getElementById("popupMessage");
+        
+        // Display the popup container
+        popupContainer.style.display = "block";
+      
+        // Set the message
+        popupMessage.innerText = "Successfully added!";
+      
+        // Hide the popup container after 2 seconds
+        setTimeout(function() {
+          popupContainer.style.display = "none";
+        }, 2000);
+      });
       
