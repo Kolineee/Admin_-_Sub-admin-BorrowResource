@@ -39,13 +39,7 @@
         </a>
         <span class="tooltip">Resources</span>
       </li>
-      <li>
-        <a href="statistics-admin.html">
-          <i class='bx bx-bar-chart-square'></i>
-          <span class="link_name">Statistics</span>
-        </a>
-        <span class="tooltip">Statistics</span>
-      </li>
+     
       <li>
         <a href="notification-admin.html">
           <i class='bx bx-bell' ></i>
@@ -115,8 +109,14 @@
                       <option value="write">Write</option>
                       <option value="admin">Admin</option>
                   </select>
-                  <p><br></p><button class="btn">Add Sub Admin</button>
-              </div>
+                  <p><br></p>
+                  <button class="btn" id="addBtn">Add</button>
+<div class="popup-container">
+  <div class="popup" id="popup">
+    <span class="popup-message" id="popupMessage">Successfully added!</span>
+  </div>
+</div>
+ </div>
           </div>
       </div>
     </form>

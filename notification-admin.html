@@ -39,6 +39,7 @@
         </a>
         <span class="tooltip">Resources</span>
       </li>
+      
       <li>
         <a href="notification-admin.html">
           <i class='bx bx-bell' ></i>
@@ -68,9 +69,75 @@
    </div>
   </div>
   <div class="home-content">
-    <div class="text">Notification Content</div>
+   
+  <div class="boxx2">
+    <h2>Notifications</h2>
+    <p>Stay Alert!</p>
+</div>
+  <div class="main">
+    <input class="srch" type="search" name="" placeholder="Search...">
+    <button class="btn">Search</button>
+</div>
+<div class="notification-container">
+<div class="notification" onclick="showPopup('Joy', 'returned HDMI', '10:00am-11:30am', 'reschedule')">
+    <p><span class="bold">Joy Marcelino</span> returned HDMI</p>
+</div>
+<div class="notification" onclick="showPopup('Bombom', 'borrowed projector 2', '11:00am-1:00pm', 'confirm')">
+    <p><span class="bold">Bombom Mudrikal</span> borrowed projector 2</p>
+</div>
+
+<div class="notification" onclick="showPopup('Gio', 'returned TV', '12:00pm-1:30pm', 'reschedule')">
+    <p><span class="bold">Gio Guevarra</span> returned  TV</p>
+</div>
+
+<div class="notification" onclick="showPopup('John', 'canceled projector 1', '3:00pm-5:00pm', 'reschedule')">
+    <p><span class="bold">John Marquez</span> canceled projector 1</p>
+</div>
+
+<div class="notification" onclick="showPopup('Rina', 'borrowed Lab 1', '2:00pm-4:00pm', 'confirm')">
+    <p><span class="bold">Rina Alcano</span> borrowed lab 1</p>
+</div>
+  <div class="notification" onclick="showPopup('Miguel', 'returned HDMI', '9:00am-11:00am', 'reschedule')">
+      <p><span class="bold">Miguel Celino</span> returned HDMI</p>
+  </div>
+  <div class="notification" onclick="showPopup('Princess', 'borrowed projector 2', '11:30am-1:30pm', 'confirm')">
+      <p><span class="bold">Princess Mudrikal</span> borrowed projector 2</p>
   </div>
 
+  <div class="notification" onclick="showPopup('Wayne', 'returned TV', '12:00pm-2:00pm', 'reschedule')">
+      <p><span class="bold">Wayne Ferrer</span> returned  TV</p>
+  </div>
+
+  <div class="notification" onclick="showPopup('Anna', 'canceled lec 2', '3:00pm-5:00pm', 'reschedule')">
+      <p><span class="bold">Anna Marquez</span> canceled Lec 2</p>
+  </div>
+
+  <div class="notification" onclick="showPopup('Rinaflor', 'borrowed Lab 1', '2:00pm-4:00pm', 'confirm')">
+      <p><span class="bold">Rinaflor Alcano</span> borrowed lab 1</p>
+  </div>
+  <div class="notification" onclick="showPopup('Princess', 'borrowed projector 2', '11:30am-1:30pm', 'confirm')">
+    <p><span class="bold">Princess Ducoy</span> borrowed projector 2</p>
+</div>
+
+<div class="notification" onclick="showPopup('Wayne', 'returned HDMI', '12:30pm-2:00pm', 'reschedule')">
+    <p><span class="bold">Herwayne Cawili</span> returned  HDMI</p>
+</div>
+
+<div class="notification" onclick="showPopup('Elsa', 'canceled lec 1', '3:00pm-5:00pm', 'reschedule')">
+    <p><span class="bold">Elsa Marquez</span> canceled Lec 1</p>
+</div>
+
+
+
+</div>
+
+<div id="popup" class="popup">
+<p><span id="popupName" class="bold"></span>: <span id="popupMessage"></span> <span id="popupTime"></span></p>
+<div class="button-container">
+    <button id="popupButton" class="button" onclick="handleButtonClick()"></button>
+</div>
+</section>
+<script src="subadmin.js"></script>
 <script src="subadmin.js"></script>
 </body>
 
