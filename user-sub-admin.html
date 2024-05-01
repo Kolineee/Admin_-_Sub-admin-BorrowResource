@@ -33,11 +33,11 @@
         <span class="tooltip">User</span>
       </li>
       <li>
-        <a href="daily-statistics.html">
-          <i class='bx bx-bar-chart-square'></i>
-          <span class="link_name">Statistics</span>
+        <a href="resources-sub-admin.html">
+          <i class='bx bx-book' style='color:#ffffff' ></i>
+          <span class="link_name">Resources</span>
         </a>
-        <span class="tooltip">Statistics</span>
+        <span class="tooltip">Resources</span>
       </li>
       <li>
         <a href="notification-sub-admin.html">
@@ -67,7 +67,163 @@
       </div>
    </div>
   </div>
-  <section class="home-content">
+  <style>.home-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    margin-top: 30px;
+}
+
+.box-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03511c;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.dropdown-toggle::after {
+    content: "\25BC";
+    display: inline-block;
+    margin-left: 5px;
+    transform: rotate(90deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e8efeb;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+}
+
+.dropdown-item {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(12, 8, 8);
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dropdown-item a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+    color: white;
+    background-color: #03511c;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+.notifications2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(211, 243, 219, 0.7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+.notifications2-box {
+    text-align: center;
+}
+
+.notifications2 h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.notifications2 p {
+    font-size: 18px;
+}
+
+.notifications2-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.notifications2-close:hover {
+    color: #ff5252; /* Red color on hover */
+}
+</style>
+  <section class="home-content"></div>
     <div class="user-list">
       <div class="box-user" id="box-user"> 
         <h1>USER LIST</h1>
@@ -76,14 +232,9 @@
           <div class="dropdown-menu" id="user-type-dropdown">
             <div class="dropdown-item"><a href="faculty-list.html">Faculty</a></div>
             <div class="dropdown-item"><a href="user-admin.html">Students</a></div>
-            <div class="dropdown-item"><a href="sub_admin-list.html">Sub-admin</a></div>
-          
           </div>
         </div>
       </div>
-      
-  
-    <div class="homee-content">
     
         <table>
         <thead>
@@ -93,6 +244,7 @@
             <th>Course</th>
             <th>Year & section</th>
             <th>School Year</th> 
+            <th>Action</th>
             
           </tr>
         </thead>
@@ -103,22 +255,24 @@
             <td>BS Computer Science</td>
             <td>2nd yr - C</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Colleen Tingas')">Delete</button></td>
               </tr>
           <tr>
             <td>Trixie Galvez</td>
-            <td>Sub-Admin</td>
+            <td>Faculty</td>
             <td>BS Information Technology</td>
             <td>3rd yr - A</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Trixie Galvez')">Delete</button></td>
            
           </tr>
           <tr>
             <td>Dannah Sabio</td>
-            <td>Sub-Admin</td>
+            <td>Faculty</td>
             <td>BS Information Technology</td>
             <td>2nd yr - B</td>
             <td>2023-2024</td>
-           
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Dannah Sabio')">Delete</button></td>
           </tr>
           
           <tr>
@@ -127,6 +281,7 @@
             <td>BS Information Technology</td>
             <td>3rd yr - A</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Farhan Hussin')">Delete</button></td>
               </tr>
           <tr>
             <td>Bombom Mudrigal</td>
@@ -134,44 +289,23 @@
             <td>BS Information Technology</td>
             <td>1st yr - B</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Bombom Mudrigal')">Delete</button></td>
              <tr>
             <td>Marie Jane Batumbakal</td>
             <td>Student</td>
             <td>BS Information Technology</td>
             <td>3rd yr - B</td>
             <td>2023-2024</td>
-            
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Jane Batumbakal')">Delete</button></td>
           </tr>
-          <td>Ethan Alviar</td>
-          <td>Student</td>
-          <td>BS Information Technology</td>
-            <td>4th yr - A</td>
-            <td>2023-2024</td>
-           
-          </tr>
-          <tr>
-            <td>Calista Perez</td>
-            <td>Student</td>
-            <td>BS Computer Science</td>
-            <td>2nd yr - C</td>
-            <td>2023-2024</td>
-            
-          </tr>
-          <tr>
-            <td>Camille Ferrer</td>
-            <td>Student</td>
-          <td>BS Information Technology</td>
-            <td>1st yr - B</td>
-            <td>2023-2024</td>
-           
-          </tr>
+         
           <tr>
             <td>Ervin Candido</td>
             <td>Student</td>
             <td>BS Information Technology</td>
             <td>2nd yr - B</td>
             <td>2023-2024</td>
-          
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ervin Candido')">Delete</button></td>
           </tr>
           <tr>
             <td>Justin Ando</td>
@@ -179,6 +313,7 @@
             <td>BS Information Technology</td>
             <td>3rd yr - A</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Justin Ando')">Delete</button></td>
           </tr>
           <tr>
             <td>Angel Bernado</td>
@@ -186,52 +321,26 @@
             <td>BS Computer Science</td>
             <td>4th yr - B</td>
             <td>2023-2024</td>
+            <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Angel Bernado')">Delete</button></td>
               </tr>
-          <tr>
-            <td>Rob Daniel</td>
-            <td>Student</td>
-            <td>BS Computer Science</td>
-            <td>2nd yr - A</td>
-            <td>2023-2024</td>
-           
-          </tr>
-          
-          <tr>
-            <td>Billie Eilish</td>
-            <td>Student</td>
-            <td>BS Information Technology</td>
-            <td>4th yr - C</td>
-            <td>2023-2024</td>
-              </tr>
+      
        
-            <td>Cyndi Lauper</td>
-            <td>Student</td>
-            <td>BS Computer Science</td>
-            <td>3rd yr - B</td>
-            <td>2023-2024</td>
-            
-          </tr>
-          <td>Joji Siwa</td>
-          <td>Student</td>
-          <td>BS Information Technology</td>
-            <td>4th yr - A</td>
-            <td>2023-2024</td>
            
-          </tr>
-          <tr>
-            <td>Jed Baruelo</td>
-            <td>Student</td>
-            <td>BS Computer Science</td>
-            <td>1st yr - B</td>
-            <td>2023-2024</td>
-          </tr>
-         
         
         </tbody>
         </table>
-  
-        
+        <div id="notifications2" class="notifications2">
+          <div class="notifications2-box">
+            <h3>Account Deleted Succesfully</h3>
+            <p id="deleted-info"></p>
+          </div>
+        </div>
+      
+        </section>
+      
+        </div>
     </div>
+    </section>
 <script src="subadmin.js"></script>
 </body>
 

@@ -313,7 +313,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
- 
+  .sidebar.active + .home-content .popup {
+    left: 30%;
+  }
   
   /*search*/
 .main {

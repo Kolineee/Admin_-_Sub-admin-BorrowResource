@@ -4,6 +4,9 @@ let btn = document.querySelector("#btn");
   btn.onclick = function(){
     sidebar.classList.toggle("active");
   }
+  function redirectToPage(page) {
+    window.location.href = page;
+}
 
    /*curve chart*/
 
@@ -168,3 +171,36 @@ function hidePopup() {
 function redirectToReschedulePage() {
     window.location.href = "resources-sub-admin.html";
 }
+
+/* drop down*/
+function toggleDropdown() {
+    var dropdownMenu = document.getElementById("user-type-dropdown");
+    dropdownMenu.classList.toggle("active");
+}
+
+function deleteAccount(name) {
+    showNotification(name);
+
+ 
+    var rows = document.querySelectorAll("tbody tr");
+    rows.forEach(function(row) {
+        if (row.cells[0].textContent === name) {
+            row.remove();
+        }
+    });
+}
+
+function showNotification(name) {
+    var notification = document.getElementById("notifications2");
+
+    var deletedInfo = document.getElementById("deleted-info");
+    deletedInfo.textContent = "Name: " + name;
+
+    // Show the notification
+    notification.style.display = "block";
+
+    setTimeout(function() {
+        notification.style.display = "none";
+    }, 2000);
+}
+

@@ -40,13 +40,6 @@
         <span class="tooltip">Resources</span>
       </li>
       <li>
-        <a href="report-sub-admin.html">
-          <i class='bx bxs-report' style='color:#ffffff' ></i>
-          <span class="link_name">Reports</span>
-        </a>
-        <span class="tooltip">Reports</span>
-      </li>
-      <li>
         <a href="notification-sub-admin.html">
           <i class='bx bx-bell' ></i>
           <span class="link_name">Notifications</span>
@@ -89,21 +82,21 @@
     <div class="box">
       <i class='bx bx-user icon'></i>
       <div>
-        <div class="text">Number of Students </div>
+        <div class="text" onclick="redirectToPage('user-sub-admin.html')">Number of Students </div>
         <p class="numbers">368 Students</p>
       </div>
     </div>
     <div class="box">
       <i class='bx bx-book-alt icon'></i>
       <div>
-        <div class="text">Resources Availability</div>
+        <div class="text" onclick="redirectToPage('report-sub-admin.html')">Resources Availability</div>
         <p class="numbers">23 Resources</p>
       </div>
     </div>
     <div class="box">
       <i class='bx bx-check icon'></i>
       <div>
-        <h4 class="text">Total Borrowed</h4>
+        <h4 class="text" onclick="redirectToPage('report-sub-admin.html')">Total Borrowed</h4>
         <p class="numbers">60 Borrowed</p>
       </div>
     </div>
@@ -120,7 +113,7 @@
 </div>
 </div>
     
-<div class="chart-container">
+<div class="chart-container" onclick="redirectToPage('report-sub-admin.html')">
   <h3>Borrowed Chart</H3>
   
   <svg class="chart"></svg>
@@ -225,7 +218,7 @@
 <h3>Recent Borrow</h3>
 </div>
 
-  <div class="container">
+  <div class="container" >
     <table>
       <thead>
         <tr>
@@ -354,10 +347,10 @@
     </table>
   </div>
   
-<div class="texthh3">
+<div class="texthh3" onclick="redirectToPage('notification-sub-admin.html')">
 <h3>Notifications</h3>
 </div>
-  <div class="notifications1-container">
+  <div class="notifications1-container" onclick="redirectToPage('notification-sub-admin.html')">
     <div class="notifications" onclick="showPopup('Joy', 'returned HDMI', '10:00am-11:30am', 'reschedule')">
         <p><span class="bold">Joy Marcelino</span> returned HDMI</p>
     </div>

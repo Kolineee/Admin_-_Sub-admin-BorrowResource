@@ -241,10 +241,6 @@ body {
 display: flex;
 background-color: #03511c;
 color: white;
-h1{
-  margin-top: 10px;
-  margin-left: 20px;
-  text-align: center;}
 height: 50px;
 width: 200px;
 border-radius: 10px;
@@ -252,6 +248,10 @@ margin-top: 20px;
 margin-left: 700px; 
 }
 
+h1{
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: center;}
 .box-user {
   position: relative;
 }
