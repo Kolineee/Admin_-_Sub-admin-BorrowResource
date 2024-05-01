@@ -4,6 +4,20 @@ let sidebar = document.querySelector(".sidebar");
 btn.onclick = function(){
     sidebar.classList.toggle("active");
 }
+/*responsive nav*/
+const sidebar = document.getElementById('sidebar');
+const mainContent = document.getElementById('main-content');
+
+document.querySelectorAll('.navlist a').forEach((navItem) => {
+  navItem.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded');
+    if (sidebar.classList.contains('expanded')) {
+      mainContent.style.marginLeft = '200px'; // Adjust main content margin when expanded
+    } else {
+      mainContent.style.marginLeft = '80px'; // Reset main content margin when collapsed
+    }
+  });
+});
 
 // Sample data for the chart (you can replace this with your actual data)
 const data = [
@@ -144,5 +158,31 @@ svg2.append('path')
     function toggleDropdown() {
         var dropdownMenu = document.getElementById("user-type-dropdown");
         dropdownMenu.classList.toggle("active");
+      }
+      
+
+      /* for account deletion*/
+      function deleteAccount(name) {
+        // Show notification
+        showNotification(name);
+      
+        // Other logic for deleting the account...
+      }
+      
+      function showNotification(name) {
+        // Get the notification element
+        var notification = document.getElementById("notification");
+      
+        // Set the deleted user info in the notification
+        var deletedInfo = document.getElementById("deleted-info");
+        deletedInfo.textContent = "Name: " + name;
+      
+        // Show the notification
+        notification.style.display = "block";
+      
+        // Hide the notification after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+          notification.style.display = "none";
+        }, 2000);
       }
       

@@ -91,7 +91,7 @@
           <th>Role</th>
           <th>Access Level</th>
           <th>School Year</th> 
-          
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -100,20 +100,21 @@
           <td>Report Accounts</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Colleen Tingas')">Delete</button></td>
             </tr>
         <tr>
           <td>Trixie Galvez</td>
           <td>Approve Reservation</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Trixie Galvez')">Delete</button></td>
         </tr>
         <tr>
           <td>Dannah Sabio</td>
           <td>Approve Reservation</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Dannah Sabio')">Delete</button></td>
         </tr>
         
         <tr>
@@ -121,29 +122,36 @@
           <td>Approve Reservation</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Farhan Hussin')">Delete</button></td>
             </tr>
         <tr>
           <td>Bombom Mudrigal</td>
           <td>Decline Reservation</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Bombom Mudrigal')">Delete</button></td>
+        </tr>
            <tr>
-
           <td>Marie Jane Batumbakal</td>
           <td>Adding Reservation</td>
           <td>Sub-Admin</td>
           <td>2023-2024</td>
-          
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Jane Batumbakal')">Delete</button></td>
         </tr>
         <td>Ethan Alviar</td>
         <td>Adding Reservation</td>
         <td>Sub-Admin</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ethan Alviar')">Delete</button></td>
         </tr>
       </tbody>
       </table>
-
+      <div id="notification" class="notification">
+        <div class="notification-box">
+          <h3>Account Deleted Succesfully</h3>
+          <p id="deleted-info"></p>
+        </div>
+      </div>
       
       </section>
   </div>

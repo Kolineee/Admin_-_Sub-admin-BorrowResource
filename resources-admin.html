@@ -75,112 +75,123 @@
        </div>
       </div>
   <div class="home-content">
+    <div class="boxx2">
+        <h2>Resources</h2>
+        <p>Set here the new time Available</p>
+    </div>
+      <div class="main">
+        <input class="srch" type="search" name="" placeholder="Search...">
+        <button class="btn">Search</button>
+    </div>
     <style>
-    .resources-container {
-        position: absolute;
-        display: flex;
-        width: 90%;
-        justify-content: center;
-        margin: 30px auto;
-        left: 78px;
-    }
-
-    .boxtable {
-        width: 80%;
-        margin-right: 20px;
-        height: 635px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        overflow: auto;
-    }
-
-    .tablebox-container table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .tablebox-container th,
-    .tablebox-container td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .tablebox-container th {
-        background-color: #4CAF50;
-        color: white;
-        position: sticky;
-        top: 0;
-    }
-
-    .action-buttons {
-        padding: 0;
-    }
-
-    .action-buttons button {
-        margin: 0 10px;
-    }
-
-    /* Adjusted width for the first two columns */
-    .tablebox-container th:nth-child(1),
-    .tablebox-container td:nth-child(1),
-    .tablebox-container th:nth-child(2),
-    .tablebox-container td:nth-child(2) {
-        width: 25%; /* Adjust percentage as needed */
-    }
-
-    .tablebox1 {
-        width: 20%;
-        height: 380px;
-        padding: 12px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .add-resource {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .time-input-group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    }
-
-    .time-input-group input[type="time"] {
-        margin-bottom: 5px;
-    }
-
-    .time-input-group label {
-        margin-bottom: 5px;
-    }
-
-    .available-time {
-        position: relative;
-    }
-
-    #addButton {
-        margin-top: 10px;
-        background-color: green;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    #addButton:hover {
-        background-color: darkgreen;
-    }
-
-    .highlight-green {
-        background-color: lightgreen;
-    }
+        .resources-container {
+            position: absolute;
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            margin: 110px auto;
+            left: 78px;
+            border-radius: 8px;
+        }
+    
+        .boxtable {
+            width: 80%;
+            margin-right: 20px;
+            height: 585px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            overflow: auto;
+            border-radius: 8px;
+        }
+    
+        .tablebox-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        .tablebox-container th,
+        .tablebox-container td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .tablebox-container th {
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+    
+        .action-buttons {
+            padding: 0;
+        }
+    
+        .action-buttons button {
+            margin: 0 10px;
+        }
+    
+    
+        .tablebox-container th:nth-child(1),
+        .tablebox-container td:nth-child(1),
+        .tablebox-container th:nth-child(2),
+        .tablebox-container td:nth-child(2) {
+            width: 25%; 
+        }
+    
+        .tablebox1 {
+            width: 20%;
+            height: 380px;
+            margin-top: 100px;
+            padding: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .add-resource {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .time-input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+    
+        .time-input-group input[type="time"] {
+            margin-bottom: 5px;
+        }
+    
+        .time-input-group label {
+            margin-bottom: 5px;
+        }
+    
+        .available-time {
+            position: relative;
+        }
+    
+        #addButton {
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        #addButton:hover {
+            background-color: darkgreen;
+        }
+    
+        .highlight-green {
+            background-color: lightgreen;
+        }
 </style>
   </head>
   <body>

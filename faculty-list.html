@@ -91,6 +91,7 @@
           <th>Position</th>
           <th>Access Level</th>
           <th>School Year</th> 
+          <th>Action</th>
           
         </tr>
       </thead>
@@ -100,20 +101,21 @@
           <td>College Dean</td>
           <td>Monitor</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Colleen Tingas')">Delete</button></td>
             </tr>
         <tr>
           <td>Trixie Galvez</td>
           <td>Department Head</td>
           <td>Monitor</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Trixie Galvez')">Delete</button></td>
         </tr>
         <tr>
           <td>Dannah Sabio</td>
           <td>Department Head</td>
           <td>Monitor</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Dannah Sabio')">Delete</button></td>
         </tr>
         
         <tr>
@@ -121,68 +123,77 @@
           <td>Faculty</td>
           <td>Adding Reservation</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Farhan Hussin')">Delete</button></td>
             </tr>
         <tr>
           <td>Bombom Mudrigal</td>
           <td>Faculty</td>
           <td>Adding Reservation</td>
           <td>2023-2024</td>
-
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Bombom Mudrigal')">Delete</button></td>
            <tr>
           <td>Marie Jane Batumbakal</td>
           <td>Faculty</td>
           <td>Approve Reservation</td>
           <td>2023-2024</td>
-          
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Jane Batumbakal')">Delete</button></td>
         </tr>
         <td>Ethan Alviar</td>
         <td>Faculty</td>
         <td>Approve Reservation</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ethan Alviar')">Delete</button></td>
         </tr>
         <tr>
           <td>Calista Perez</td>
           <td>Faculty</td>
           <td>Decline Reservation</td>
           <td>2023-2024</td>
-          
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Calista Perez')">Delete</button></td>
         </tr>
         <tr>
           <td>Camille Ferrer</td>
           <td>Faculty</td>
-        <td>Decline Reservatio</td>
+        <td>Decline Reservation</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Camille Ferrer')">Delete</button></td>
         </tr>
         <tr>
           <td>Ervin Candido</td>
           <td>Faculty</td>
-          <td>Decline Reservatio</td>
+          <td>Decline Reservation</td>
           <td>2023-2024</td>
-        
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ervin Candido')">Delete</button></td>
         </tr>
         <tr>
           <td>Justin Ando</td>
           <td>Faculty</td>
-          <td>Decline Reservatio</td>
+          <td>Decline Reservation</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Justin Ando')">Delete</button></td>
         </tr>
         <tr>
           <td>Angel Bernado</td>
           <td>Faculty</td>
-          <td>Decline Reservatio</td>
+          <td>Decline Reservation</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Angel Bernado')">Delete</button></td>
             </tr>
         
       </tbody>
       </table>
-
+      <div id="notification" class="notification">
+        <div class="notification-box">
+          <h3>Account Deleted Succesfully</h3>
+          <p id="deleted-info"></p>
+        </div>
+      </div>
       
       </section>
   </div>
   <script src="https://d3js.org/d3.v6.min.js"></script>
 <script src="admin.js"></script>
+<script src="subadmin.js"></script>
 </body>
 
 </html>
