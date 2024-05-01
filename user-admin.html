@@ -99,6 +99,7 @@
           <th>Course</th>
           <th>Year & section</th>
           <th>School Year</th> 
+          <th>Action</th>
           
         </tr>
       </thead>
@@ -109,6 +110,7 @@
           <td>BS Computer Science</td>
           <td>2nd yr - C</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Colleen Tingas')">Delete</button></td>
             </tr>
         <tr>
           <td>Trixie Galvez</td>
@@ -116,6 +118,7 @@
           <td>BS Information Technology</td>
           <td>3rd yr - A</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Trixie Galvez')">Delete</button></td>
          
         </tr>
         <tr>
@@ -124,7 +127,7 @@
           <td>BS Information Technology</td>
           <td>2nd yr - B</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Dannah Sabio')">Delete</button></td>
         </tr>
         
         <tr>
@@ -133,6 +136,7 @@
           <td>BS Information Technology</td>
           <td>3rd yr - A</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Farhan Hussin')">Delete</button></td>
             </tr>
         <tr>
           <td>Bombom Mudrigal</td>
@@ -140,20 +144,21 @@
           <td>BS Information Technology</td>
           <td>1st yr - B</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Bombom Mudrigal')">Delete</button></td>
            <tr>
           <td>Marie Jane Batumbakal</td>
           <td>Student</td>
           <td>BS Information Technology</td>
           <td>3rd yr - B</td>
           <td>2023-2024</td>
-          
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Marie Jane Batumbakal')">Delete</button></td>
         </tr>
         <td>Ethan Alviar</td>
         <td>Student</td>
         <td>BS Information Technology</td>
           <td>4th yr - A</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ethan Alviar')">Delete</button></td>
         </tr>
         <tr>
           <td>Calista Perez</td>
@@ -161,7 +166,7 @@
           <td>BS Computer Science</td>
           <td>2nd yr - C</td>
           <td>2023-2024</td>
-          
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Calista Perez')">Delete</button></td>
         </tr>
         <tr>
           <td>Camille Ferrer</td>
@@ -169,7 +174,7 @@
         <td>BS Information Technology</td>
           <td>1st yr - B</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Camille Ferrer')">Delete</button></td>
         </tr>
         <tr>
           <td>Ervin Candido</td>
@@ -177,7 +182,7 @@
           <td>BS Information Technology</td>
           <td>2nd yr - B</td>
           <td>2023-2024</td>
-        
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Ervin Candido')">Delete</button></td>
         </tr>
         <tr>
           <td>Justin Ando</td>
@@ -185,6 +190,7 @@
           <td>BS Information Technology</td>
           <td>3rd yr - A</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Justin Ando')">Delete</button></td>
         </tr>
         <tr>
           <td>Angel Bernado</td>
@@ -192,6 +198,7 @@
           <td>BS Computer Science</td>
           <td>4th yr - B</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Angel Bernado')">Delete</button></td>
             </tr>
         <tr>
           <td>Rob Daniel</td>
@@ -199,7 +206,7 @@
           <td>BS Computer Science</td>
           <td>2nd yr - A</td>
           <td>2023-2024</td>
-         
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Rob Daniel')">Delete</button></td>
         </tr>
         
         <tr>
@@ -208,36 +215,23 @@
           <td>BS Information Technology</td>
           <td>4th yr - C</td>
           <td>2023-2024</td>
+          <td><button id="deleteBtn1" class="delete-button" onclick="deleteAccount('Billie Eilish')">Delete</button></td>
             </tr>
      
-          <td>Cyndi Lauper</td>
-          <td>Student</td>
-          <td>BS Computer Science</td>
-          <td>3rd yr - B</td>
-          <td>2023-2024</td>
-          
-        </tr>
-        <td>Joji Siwa</td>
-        <td>Student</td>
-        <td>BS Information Technology</td>
-          <td>4th yr - A</td>
-          <td>2023-2024</td>
          
-        </tr>
-        <tr>
-          <td>Jed Baruelo</td>
-          <td>Student</td>
-          <td>BS Computer Science</td>
-          <td>1st yr - B</td>
-          <td>2023-2024</td>
-        </tr>
-       
       
       </tbody>
       </table>
-
-      
+      <div id="notification" class="notification">
+        <div class="notification-box">
+          <h3>Account Deleted Succesfully</h3>
+          <p id="deleted-info"></p>
+        </div>
+      </div>
+    
       </section>
+    
+      </div>
   </div>
   <script src="https://d3js.org/d3.v6.min.js"></script>
 <script src="admin.js"></script>

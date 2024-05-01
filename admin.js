@@ -146,3 +146,29 @@ svg2.append('path')
         dropdownMenu.classList.toggle("active");
       }
       
+
+      /* for account deletion*/
+      function deleteAccount(name) {
+        // Show notification
+        showNotification(name);
+      
+        // Other logic for deleting the account...
+      }
+      
+      function showNotification(name) {
+        // Get the notification element
+        var notification = document.getElementById("notification");
+      
+        // Set the deleted user info in the notification
+        var deletedInfo = document.getElementById("deleted-info");
+        deletedInfo.textContent = "Name: " + name;
+      
+        // Show the notification
+        notification.style.display = "block";
+      
+        // Hide the notification after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+          notification.style.display = "none";
+        }, 2000);
+      }
+      
