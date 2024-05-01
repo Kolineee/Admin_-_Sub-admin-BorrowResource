@@ -98,12 +98,12 @@ function addResource() {
     }
     var availableTime = formatTime(startTime) + " - " + formatTime(endTime);
     var table = document.getElementById("resource-table");
-    var row = table.insertRow(0); // insert at the first position to make it the first row
+    var row = table.insertRow(0); 
     var resourceNameCell = row.insertCell(0);
     var availableTimeCell = row.insertCell(1);
     var statusCell = row.insertCell(2);
     var actionCell = row.insertCell(3);
-    resourceNameCell.innerHTML = resourceName.toLowerCase(); // Convert to lowercase
+    resourceNameCell.innerHTML = resourceName.toLowerCase(); 
     availableTimeCell.innerHTML = availableTime;
     statusCell.innerHTML = "Available";
     actionCell.innerHTML = '<button onclick="editRow(this)" class="boxicon bx bx-edit"></button><button onclick="deleteRow(this)" class="boxicon bx bx-trash"></button>';

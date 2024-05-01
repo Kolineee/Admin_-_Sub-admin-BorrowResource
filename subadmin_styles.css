@@ -499,15 +499,21 @@ body {
 
 /*Notif*/
 
+.sidebar.active + .home-content .notification-container {
+  width: 500px; 
+  margin-left: 430px
+}
 .notification-container {
   position: absolute;
   align-items: center;
-  margin-left: 520px;
-  margin-top: 160px;
+  margin-left: 470px;
+  margin-top: 110px;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  width: 300px;
+  width: 550px;
+  height: 600px;
+  overflow: auto;
 }
 
 .notification {
@@ -522,11 +528,13 @@ body {
 .bold {
   font-weight: bold;
 }
-
+.sidebar.active + .home-content .popup {
+  left: 50%;
+}
 .popup {
 position: fixed;
 top: 50%;
-left: 50%;
+left: 53%;
 transform: translate(-50%, -50%);
 background-color: rgba(255, 255, 255, 0.9);
 border: 2px solid #ccc;
